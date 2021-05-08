@@ -1,0 +1,17 @@
+component: website
+name: thehkus
+org: test
+app: websiteApp
+stage: dev
+
+inputs:
+  src:
+    src: ./src
+    # hook: npm run build
+    index: index.html
+    error: index.html
+  region: ap-hongkong
+  bucketName: my-bucket
+  protocols:
+    -http
+    -https
