@@ -1,8 +1,8 @@
 component: website
 name: thehkus
 org: test
-app: websiteApp
-stage: dev
+app: TheCloud
+stage: prod
 
 inputs:
   src:
