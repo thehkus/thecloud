@@ -22,7 +22,7 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../image/background.png') no-repeat;
+    background: url('../image/background.png') center / cover;
     
 }
 .btn {
