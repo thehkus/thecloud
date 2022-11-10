@@ -1,45 +1,84 @@
-<!--
- * @Author: THEHKUS
- * @Date: 2020-07-10
- * @LastEditTime: 2022-03-24
- * @LastEditors: Kingson HO
- * @Description: In User Settings Edit
--->
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" class="h-100">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Home | THEHKUS</title>
-    <link rel="shortcut icon" href="static/image/favicon.png" type="image/png" sizes="16x16">
-    <link href="static/css/index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="THEHKUS">
+    <title>Home | THEHKUS </title>
+    <link rel="shortcut icon" href="./static/image/favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="./static/css/public/bootstrap.min.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <link href="../src/static/css/thehkus.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav>
-        <h1 class="logo">THEHKUS</h1>
-    </nav>
-    <div class="contain">
+<body class="d-flex h-100 text-center text-white bg-dark">
 
-        <div class="content">
-            <div class="btn">
-                <div class="jumpButton">
-                    <a class="link" href="https://cn.cloud.thehkus.com:7443">中国内地</a>
-                </div>
-                <div class="jumpButton">
-                    <a class="link" href="https://hk.cloud.thehkus.com">中國香港</a>
-                </div>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h4 class="float-md-start mb-0"><img src="./static/image/favicon.png" alt="logo"> THEHKUS</h4>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <!-- <a class="nav-link active" href="#">Home</a> -->
+                    <div class="dropdown nav-link">
+                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            AnyConnect
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item disabled" href="https://cn2sg.thehkus.com:30444">中國香港</a></li>
+                            <li><a class="dropdown-item" href="https://cn2hk.thehkus.com:30444">新加坡</a></li>
+                            <li><a class="dropdown-item disabled" href="https://cn2usa.thehkus.com:30444">美国</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown nav-link">
+                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            The Cloud
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://hk.cloud.thehkus.com">中國香港</a></li>
+                            <li><a class="dropdown-item" href="https://cn.cloud.thehkus.com:7443">中国内地</a></li>
+
+                        </ul>
+
+                    </div>
+                </nav>
             </div>
-        </div>
+        </header>
 
-        <footer>
+        <main class="px-3">
+            <h1>Welcome ‧ 欢迎</h1>
+            <p class="lead">Miracles happen every day. 奇迹每天都在发生。</p>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white" onclick="alert('Hello! 你好呀！')">点我</a>
+            </p>
+
+        </main>
+
+        <footer class="mt-auto text-white-50">
             <p>&copy; 2017-2022 THEHKUS. All Rights Reserved.</p>
         </footer>
     </div>
 
-
+    <script src="./static/js/public/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

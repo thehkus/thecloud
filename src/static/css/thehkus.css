@@ -69,3 +69,9 @@ body {
     color: #fff;
     border-bottom-color: #fff;
 }
+
+/* 主体 */
+.lead a:hover {
+    color: #D85A7F;
+    /* color: #6a213e; */
+}
