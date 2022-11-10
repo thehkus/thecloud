@@ -1,58 +1,85 @@
 @charset "UTF-8";
+
 * {
     padding: 0;
     margin: 0;
 }
-html,body{
-    height: 100%; padding: 0; margin: 0; width: 100%;
+
+html,
+body {
+    height: 100%;
+    width: 100%;
 }
+
+nav {
+    height: 120px;
+    background-color: #6a213e;
+    /* background-color: #D85A7F; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    color: white;
+    text-shadow: 8px 11px 5px rgba(145, 142, 113, 0.8);
+}
+
 .contain {
+    width: 100%;
     height: 100%;
 }
-.header{
-    text-align: center;
-    background-color: #6a213e;
-    color: white;
-    padding: 15px;
-}
-.content{
-    height: 90%;
+
+.content {
+    height: 100%;
     width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('../image/background.png') center / cover;
-    
+
 }
+
 .btn {
     display: inline-block;
     vertical-align: middle;
-    align-self:center;
+    align-self: center;
     /* border:3px solid #000000;*/
 }
-.jumpButton{
+
+.jumpButton {
     padding: 20px 40px;
     display: inline-block;
 }
-.link{
+
+.link {
     padding: 20px;
-   /* margin-top: 100px; margin-bottom: 100px;  */
+    /* margin-top: 100px; margin-bottom: 100px;  */
 }
-.link:link, .link:visited{
+
+.link:link,
+.link:visited {
+    display: inline-block;
+    color: black;
+    text-align: center;
     text-decoration: none;
     /* background-color: #ce587f; */
     background-color: #e89b5a;
-    color: black;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.link:hover {
     font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #D85A7F;
 }
-.link:hover{
-    background-color: #c01b60;
-}
+
 footer {
     font-size: 8px;
     text-align: center;
