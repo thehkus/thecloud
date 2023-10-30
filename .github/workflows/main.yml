@@ -18,24 +18,17 @@ jobs:
     name: deploy serverless
     runs-on: ubuntu-latest
     needs: [test]
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
       - name: clone local repository
         uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
       - name: install serverless
-        run: npm install -g serverless
+        run: npm install -g serverless-cloud-framework
       - name: install dependency
         run: npm install
       - name: build
         run: npm build
       - name: deploy serverless
-        run: sls deploy --debug
+        run: scf deploy --debug
         env: # 环境变量
           STAGE: dev #您的部署环境
           SERVERLESS_PLATFORM_VENDOR: tencent #serverless 配置为腾讯
