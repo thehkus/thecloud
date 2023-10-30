@@ -20,7 +20,7 @@ jobs:
     needs: [test]
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
     steps:
       - name: clone local repository
         uses: actions/checkout@v2
