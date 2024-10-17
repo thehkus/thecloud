@@ -29,8 +29,12 @@
 </head>
 
 <body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="shaders">
+        <div class="topLeft"></div>
+        <div class="topRight"></div>
+    </div>
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
             <div>
                 <h4 class="float-md-start mb-0"><img src="./static/image/favicon.png" alt="logo"> THEHKUS</h4>
@@ -54,7 +58,7 @@
                             The Cloud
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://hk.cloud.thehkus.com">中國香港</a></li>
+                            <li><a class="dropdown-item disabled" href="https://hk.cloud.thehkus.com">中國香港</a></li>
                             <li><a class="dropdown-item" href="https://cn.cloud.thehkus.com:7443">中国内地</a></li>
                         </ul>
                     </div>
@@ -80,9 +84,28 @@
         <footer class="mt-auto text-white-50">
             <p>&copy; 2017-2024 THEHKUS. All Rights Reserved.</p>
         </footer>
+
+        <div class="shaders">
+            <div class="bottom"></div>
+        </div>
     </div>
 
     <script src="./static/js/public/bootstrap.bundle.min.js"></script>
+    <script>
+        async function fetchBingWallpaper () {
+            try {
+                const response = await fetch('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN');
+                const data = await response.json();
+                const imageUrl = `https://cn.bing.com${data.images[0].url}`;
+                console.log('Bing wallpaper:', imageUrl);
+                document.body.style.backgroundImage = `url(${imageUrl})`;
+            } catch (error) {
+                console.error('Error fetching Bing wallpaper:', error);
+            }
+        }
+
+        fetchBingWallpaper();
+    </script>
 </body>
 
 </html>

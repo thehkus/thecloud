@@ -21,6 +21,8 @@ body {
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
     /* background: url(./background.png) center / cover; */
+    background-size: cover;
+    background-position: center;
 }
 
 .cover-container {
@@ -31,7 +33,7 @@ body {
 /*
  * Header
  */
-.mb-auto > div > h4{
+.mb-auto>div>h4 {
     font-weight: bold;
     text-shadow: 4px 8px 4px rgba(145, 142, 113, 0.75);
 }
@@ -39,19 +41,24 @@ body {
 .nav-masthead .nav-link {
     padding: .25rem 0;
     font-weight: 700;
-    color: rgba(255, 255, 255, .5);
+    color: #fff;
     background-color: transparent;
     border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-link > a {
-    color: rgba(255, 255, 255, .5);
+.nav-masthead .nav-link>a {
+    color: #fff;
     text-decoration: none;
 }
-.nav-masthead .nav-link > a:hover,
-.nav-masthead .nav-link > a:focus{
-    color: #D85A7F;
+
+.nav-masthead .nav-link>a:hover,
+.nav-masthead .nav-link>a:focus {
+    /* color: #D85A7F; */
+    color: #FFF;
     border-bottom-color: rgba(255, 255, 255, .25);
+        text-shadow: 1px 1px 2px #333,
+                0 0 1em white,
+                0 0 1.5em white;
 }
 
 .nav-masthead .nav-link:hover,
@@ -59,6 +66,7 @@ body {
     color: #D85A7F;
     border-bottom-color: rgba(255, 255, 255, .25);
     /* border-bottom-color: rgba(216, 90, 127, .25); */
+
 }
 
 .nav-masthead .nav-link+.nav-link {
@@ -74,4 +82,40 @@ body {
 .lead a:hover {
     color: #D85A7F;
     /* color: #6a213e; */
+}
+
+/* 上下底部颜色遮罩 */
+.shaders {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1
+}
+
+.shaders .topLeft,
+.shaders .topRight,
+.shaders .bottom {
+    height: 28%;
+    position: absolute
+}
+
+.shaders .topLeft {
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, .5) -20%, transparent 30%)
+}
+
+.shaders .topRight {
+    right: 0;
+    width: 100%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, .5) -20%, transparent 30%)
+}
+
+.shaders .bottom {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .6) 100%);
+    bottom: 0;
+    left: 0;
+    width: 100%
 }
