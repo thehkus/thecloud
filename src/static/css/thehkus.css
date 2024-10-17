@@ -29,7 +29,6 @@ body {
     max-width: 42em;
 }
 
-
 /*
  * Header
  */
@@ -56,9 +55,10 @@ body {
     /* color: #D85A7F; */
     color: #FFF;
     border-bottom-color: rgba(255, 255, 255, .25);
-        text-shadow: 1px 1px 2px #333,
-                0 0 1em white,
-                0 0 1.5em white;
+    text-shadow:
+        1px 1px 2px #333,
+        0 0 1em white,
+        0 0 1.5em white;
 }
 
 .nav-masthead .nav-link:hover,
@@ -76,6 +76,13 @@ body {
 .nav-masthead .active {
     color: #fff;
     border-bottom-color: #fff;
+}
+
+main {
+    text-shadow:
+        1px 1px 2px #333,
+        0 0 1em #333,
+        0 0 0.5em white;
 }
 
 /* 主体 */
