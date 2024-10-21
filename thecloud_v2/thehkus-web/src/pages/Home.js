@@ -42,16 +42,21 @@ function Home () {
   return (
     <Layout
       style={{
-        minHeight: '90vh',
-        background: `url(${backgroundImg})`
+        minHeight: '100vh',
+        alignItems: 'center',
+        padding: '0px 20',
+        // background: `url(${backgroundImg}) no-repeat center/cover `,
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-
-      <Header style={{ display: 'flex', alignItems: 'center', background: 'transparent', maxWidth: "1200px" }}>
+      <Header style={{ display: 'flex', alignItems: 'center', background: 'transparent', width: '100%', maxWidth: 1200 }}>
         <img src={logo} alt="THEHKUS LOGO" />
         <Typography.Title
           level={4}
-          style={{ margin: "0 0.6em", textShadow: "3px 3px 4px rgba(0, 0, 0, .3)" }}>
+          style={{ margin: "0 0.6em", textShadow: "3px 3px 4px rgba(0, 0, 0, .3)", color:'#e6e6e6' }}>
           THEHKUS
         </Typography.Title>
         <Menu
@@ -59,11 +64,11 @@ function Home () {
           mode="horizontal"
           items={menuItems}
           style={{ flex: 1, minWidth: 0, justifyContent: 'flex-end', background: 'transparent' }}
+          popupBg
         />
       </Header>
-      <Content style={{ padding: '0 48px' }}>
-
-        <div
+      <Content style={{ width: "100%" }}>
+        {/* <div
           style={{
             background: colorBgContainer,
             minHeight: 280,
@@ -72,7 +77,7 @@ function Home () {
           }}
         >
           Content
-        </div>
+        </div> */}
       </Content>
       <Footer style={{ textAlign: 'center' }}>
         © 2017-{new Date().getFullYear()} THEHKUS. All Rights Reserved.
